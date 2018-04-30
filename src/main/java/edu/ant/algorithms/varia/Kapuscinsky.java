@@ -10,6 +10,9 @@ import java.util.Random;
 
 /**
  * Created by Matt on 04.09.2018 at 21:58.
+ * Tribute to famous Polish non-fiction writer and reporter Ryszard Kapuściński.
+ * Program reads content of file and prints it out in old school telegram-like style.
+ * Just as Mr. Kapuściński from a war zone.
  */
 
 
