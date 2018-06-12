@@ -1,8 +1,9 @@
-package com.beehive.algorithms.numbers;
+package edu.ant.algorithms.math.problems;
 
 /**
  * Created by Matt on 28.12.2018 at 11:20.
  */
+
 public class PerfectNumber {
 
     public static boolean isPerfectNumber(int number) {

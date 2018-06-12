@@ -1,8 +1,9 @@
-package com.beehive.algorithms.numbers;
+package edu.ant.algorithms.math.problems;
 
 /**
  * Created by Matt on 23.12.2018 at 21:00.
  */
+
 public class PlayingCat {
 
     public static boolean isCatPlaying(boolean summer, int temperature) {

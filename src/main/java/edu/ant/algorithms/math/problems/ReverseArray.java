@@ -1,10 +1,11 @@
-package com.beehive.algorithms.numbers;
+package edu.ant.algorithms.math.problems;
 
 import java.util.Arrays;
 
 /**
  * Created by Matt on 01.01.2019 at 19:50.
  */
+
 public class ReverseArray {
 
     public static void main(String[] args) {
