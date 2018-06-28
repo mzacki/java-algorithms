@@ -1,8 +1,9 @@
-package com.beehive.algorithms.numbers;
+package edu.ant.algorithms.math.problems;
 
 /**
  * Created by Matt on 21.12.2018 at 13:45.
  */
+
 public class TeenNumberChecker {
 
     public static void main(String[] args) {

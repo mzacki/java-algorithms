@@ -1,8 +1,9 @@
-package com.beehive.algorithms.numbers;
+package edu.ant.algorithms.math.problems;
 
 /**
  * Created by Matt on 25.12.2018 at 12:35.
  */
+
 public class SumThreeAndFive {
 
     public static void main(String[] args) {

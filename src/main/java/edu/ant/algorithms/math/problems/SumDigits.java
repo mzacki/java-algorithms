@@ -1,8 +1,9 @@
-package com.beehive.algorithms.numbers;
+package edu.ant.algorithms.math.problems;
 
 /**
  * Created by Matt on 27.12.2018 at 19:41.
  */
+
 public class SumDigits {
 
     public static void main(String[] args) {
