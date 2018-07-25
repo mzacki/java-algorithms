@@ -1,4 +1,4 @@
-package edu.ant.algorithms.varia;
+package edu.ant.algorithms.concurrency.varia;
 
 import java.io.BufferedReader;
 import java.io.File;
