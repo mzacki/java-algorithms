@@ -1,5 +1,7 @@
 package edu.ant.algorithms.concurrency;
 
+import java.util.concurrent.atomic.AtomicLong;
+
 public class BeesAndFlowersMain {
 
 
@@ -9,7 +11,7 @@ public class BeesAndFlowersMain {
 
     private static void beeAndFlowerExecutor() {
 
-        BeesAndFlowers beesAndFlowers = new BeesAndFlowers(125);
+        BeesAndFlowers beesAndFlowers = new BeesAndFlowers(new AtomicLong(125));
 
         Thread beeThread1 = new Thread(() -> beesAndFlowers.pollinateAllFlowers("Bee no. 1"));
         Thread beeThread2 = new Thread(() -> beesAndFlowers.pollinateAllFlowers("Bee no. 2"));
