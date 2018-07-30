@@ -14,4 +14,8 @@ public class LoggingService {
         LOG.info("Logging service msg: {}", args);
     }
 
+    public static Logger getLogger() {
+        return LOG;
+    }
+
 }
