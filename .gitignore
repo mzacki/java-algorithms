@@ -4,6 +4,7 @@ logs/
 
 *.iml
 .idea/
+.cuvet/
 
 # Compiled class file
 *.class
