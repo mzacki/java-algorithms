@@ -20,6 +20,13 @@ public class ThreadCreateAndStartExamples {
         thread.start();
 
         /**
+         * Thread class object invoked as lambda
+         * */
+
+        Thread lambdaThread = new Thread(() -> LoggingService.logMessage("Thread object as lambda...."));
+        lambdaThread.start();
+
+        /**
          * By class extending Thread class...
          * */
 
@@ -37,6 +44,13 @@ public class ThreadCreateAndStartExamples {
             }
         };
         runnable.run();
+
+        /**
+         * Lambda implementation of Runnable interface.
+         * */
+
+        Runnable runnableLambda = () -> LoggingService.logMessage("Runnable as lambda...");
+        runnableLambda.run();
 
     }
 
