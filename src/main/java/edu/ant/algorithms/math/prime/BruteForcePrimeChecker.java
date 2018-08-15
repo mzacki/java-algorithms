@@ -12,12 +12,11 @@ public class BruteForcePrimeChecker {
             }
         }
 
-
     }
 
     public static boolean check(long n) {
 
-        if ( n <= 0) {
+        if (n <= 0) {
             throw new IllegalArgumentException("Argument has to be greater than zero");
         }
 
