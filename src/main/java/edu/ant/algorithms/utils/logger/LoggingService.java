@@ -14,6 +14,14 @@ public class LoggingService {
         LOG.info("Logging service msg: {}", args);
     }
 
+    public static void logTwoArgs(Object... args) {
+        LOG.info("Logging service msg: {} {}", args);
+    }
+
+    public static void logThreeArgs(Object... args) {
+        LOG.info("Logging service msg: {} {} {}", args);
+    }
+
     public static Logger getLogger() {
         return LOG;
     }
