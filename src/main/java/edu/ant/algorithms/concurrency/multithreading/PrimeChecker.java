@@ -1,4 +1,4 @@
-package edu.ant.algorithms.concurrency;
+package edu.ant.algorithms.concurrency.multithreading;
 
 import edu.ant.algorithms.math.prime.BruteForcePrimeChecker;
 import edu.ant.algorithms.utils.logger.LoggingService;

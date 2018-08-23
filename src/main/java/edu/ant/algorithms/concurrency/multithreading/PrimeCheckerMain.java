@@ -1,4 +1,4 @@
-package edu.ant.algorithms.concurrency;
+package edu.ant.algorithms.concurrency.multithreading;
 
 public class PrimeCheckerMain {
 
