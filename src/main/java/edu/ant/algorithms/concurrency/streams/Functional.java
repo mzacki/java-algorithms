@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.IntConsumer;
+import java.util.function.Predicate;
 import java.util.function.ToIntFunction;
 import java.util.function.UnaryOperator;
 import java.util.stream.Stream;
@@ -45,6 +46,10 @@ public class Functional {
         // String to Int Function
         ToIntFunction<String> intFunction = String::length;
         display("Password length: " + intFunction.applyAsInt("MyImpossibleToBreakPass"));
+
+        // Predicate - tests condition
+        Predicate<String> predicate = s -> s.length() >= 8;
+        display("Password has at least 8 chars: " + predicate.test("Pass123"));
 
     }
 
