@@ -1,17 +1,14 @@
 package edu.ant.algorithms.concurrency.streams;
 
-import edu.ant.algorithms.collections.generic.KeyValuePair;
 import edu.ant.algorithms.utils.logger.LoggingService;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
+import java.util.Map.Entry;
 import java.util.function.BiFunction;
 import java.util.stream.Collectors;
-import org.slf4j.LoggerFactory;
 
 /**
  * Arity (/ˈærɪti/ is the number of arguments or operands taken by a function or operation in logic,
@@ -30,18 +27,27 @@ public class TwoArityFunctional {
         players.put(2L, "Hikaru Nakamura");
         players.put(3L, "Fabiano Caruana");
         players.put(4L, "Jan Krzysztof");
+        players.put(5L, "Deep Blue");
 
         // bi-functional in replaceAll()
         players.replaceAll((id, oldValue) ->
                 id < 10L ? oldValue : oldValue + " GM" );
 
+        // logger here is consumer itself: () -> log(value)
         players.forEach(LoggingService::logTwoArgs);
-
-        Map<Long, String> newMap = new HashMap<>();
-        players.forEach(newMap::put);
 
         // bi-functional used within randomize()
         randomize(players).forEach(LoggingService::logTwoArgs);
+
+        // use of Predicate in the filter
+        List<String> ranking = players
+                .entrySet()
+                .stream()
+                .filter(entry -> entry.getKey() < 4)
+                .map(Entry::getValue)
+                .collect(Collectors.toList());
+
+        ranking.forEach(LoggingService::logMessage);
 
     }
 
