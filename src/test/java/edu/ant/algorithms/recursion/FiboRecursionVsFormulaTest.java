@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 class FiboRecursionVsFormulaTest {
 
     @Test
-    void name() throws Exception {
+    void shouldReturnGIvenElement() throws Exception {
         // arrange;
         double result;
         // act

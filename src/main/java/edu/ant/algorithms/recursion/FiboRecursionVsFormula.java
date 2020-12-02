@@ -1,46 +1,48 @@
 package edu.ant.algorithms.recursion;
 
+import edu.ant.algorithms.utils.logger.LoggingService;
 import java.util.Scanner;
 
 public class FiboRecursionVsFormula {
+
     public static void main(String[] args) {
-        System.out.println("Porównanie szybkości algorytmów");
-        System.out.println("----------------------------------------");
-        System.out.println("Rekursja vs obliczanie ze wzoru");
-        System.out.println("\nPodaj, który wyraz ciągu Fibonacciego chcesz uzyskać...");
+        LoggingService.logMessage("Algorithm speed comparator");
+        LoggingService.logMessage("----------------------------------------");
+        LoggingService.logMessage("Recursion vs mathematic formula");
+        LoggingService.logMessage("\nWrite which n-th element of Fibonacci sequence you wish to count (and press Enter)");
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
-        System.out.println("Dziękuję.");
+        LoggingService.logMessage("Thank you");
         scan.close();
-        System.out.println("\nObliczam...");
-        System.out.println( "\nZłota proporcja (liczba PHI) wynosi: " + PHI);
+        LoggingService.logMessage("\nCounting...");
+        LoggingService.logMessage("\nGolden ration (a.k.a. PHI number): " + PHI);
         long start = System.currentTimeMillis();
-        System.out.println("\nObliczam rekursywnie...");
-        System.out.println(n + " wyraz ciągu to " + fibonacciRecursive(n));
+        LoggingService.logMessage("\nCounting recursively...");
+        LoggingService.logMessage(n + "th element is " + fibonacciRecursive(n));
         long end = System.currentTimeMillis() - start;
-        System.out.println("Czas (ms): " + end);
-        System.out.println("\nObliczam ze wzoru...");
+        LoggingService.logMessage("Time (ms): " + end);
+        LoggingService.logMessage("\nCounting with formula...");
         long start2 = System.currentTimeMillis();
-        System.out.println(n + " wyraz ciągu to " + fibonacciFormula(n));
+        LoggingService.logMessage(n + "th element is " + fibonacciFormula(n));
         long end2 = System.currentTimeMillis() - start2;
-        System.out.println("Czas (ms): " + end2 );
-
+        LoggingService.logMessage("Time (ms): " + end2);
+        LoggingService.logMessage("Thank you for your attention Sir / Madam.");
     }
 
     public static final double PHI = (1 + Math.sqrt(5)) / 2;
 
     public static double fibonacciFormula(double n) {
-
         return Math.floor((Math.pow(PHI, n) - Math.pow((1 - PHI), n)) / Math.sqrt(5));
     }
 
     public static int fibonacciRecursive(int n) {
-        if (n == 0)
+        if (n == 0) {
             return 0;
-        else if (n == 1)
+        } else if (n == 1) {
             return 1;
-        else
+        } else {
             return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
+        }
     }
 
 }
