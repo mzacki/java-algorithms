@@ -14,7 +14,7 @@ public class Day1Puzzle2 {
 
 
     public static void main(String[] args) {
-        InputStream is = Day1Puzzle1.class.getClassLoader().getResourceAsStream("advent2020/input1.txt");
+        InputStream is = Day1Puzzle2.class.getClassLoader().getResourceAsStream("advent2020/input1.txt");
         List<Long> longs = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8))
                 .lines()
                 .map(Long::valueOf)

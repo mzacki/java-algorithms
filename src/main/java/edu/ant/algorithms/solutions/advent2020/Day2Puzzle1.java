@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
 public class Day2Puzzle1 {
 
     public static void main(String[] args) {
-        InputStream is = Day1Puzzle1.class.getClassLoader().getResourceAsStream("advent2020/input2.txt");
+        InputStream is = Day2Puzzle1.class.getClassLoader().getResourceAsStream("advent2020/input2.txt");
         List<String> input = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8))
                 .lines()
                 .collect(Collectors.toList());
