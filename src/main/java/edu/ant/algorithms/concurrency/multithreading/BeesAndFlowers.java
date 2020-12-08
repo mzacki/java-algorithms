@@ -1,6 +1,6 @@
 package edu.ant.algorithms.concurrency.multithreading;
 
-import edu.ant.algorithms.utils.logger.LoggingService;
+import edu.ant.utils.logger.LoggingService;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;

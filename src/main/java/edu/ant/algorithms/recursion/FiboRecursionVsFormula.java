@@ -1,6 +1,6 @@
 package edu.ant.algorithms.recursion;
 
-import edu.ant.algorithms.utils.logger.LoggingService;
+import edu.ant.utils.logger.LoggingService;
 import java.util.Scanner;
 
 public class FiboRecursionVsFormula {

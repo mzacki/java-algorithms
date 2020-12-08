@@ -1,6 +1,6 @@
 package edu.ant.algorithms.math.prime;
 
-import edu.ant.algorithms.utils.logger.LoggingService;
+import edu.ant.utils.logger.LoggingService;
 
 /**
  * Created by Matt on 09.09.2018 at 18:28.

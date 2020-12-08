@@ -1,6 +1,6 @@
 package edu.ant.algorithms.concurrency.streams;
 
-import edu.ant.algorithms.utils.logger.LoggingService;
+import edu.ant.utils.logger.LoggingService;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package edu.ant.algorithms.collections.generic;
+package edu.ant.structures.collections.generic;
 
 public class Container<T> {
 

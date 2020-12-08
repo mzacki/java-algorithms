@@ -1,6 +1,6 @@
 package edu.ant.algorithms.solutions.advent2020;
 
-import edu.ant.algorithms.utils.logger.LoggingService;
+import edu.ant.utils.logger.LoggingService;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;

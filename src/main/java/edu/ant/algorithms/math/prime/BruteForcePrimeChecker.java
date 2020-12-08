@@ -1,6 +1,6 @@
 package edu.ant.algorithms.math.prime;
 
-import edu.ant.algorithms.utils.logger.LoggingService;
+import edu.ant.utils.logger.LoggingService;
 
 public class BruteForcePrimeChecker {
 

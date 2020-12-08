@@ -1,7 +1,7 @@
 package edu.ant.algorithms.concurrency.multithreading;
 
 import edu.ant.algorithms.math.prime.BruteForcePrimeChecker;
-import edu.ant.algorithms.utils.logger.LoggingService;
+import edu.ant.utils.logger.LoggingService;
 
 public class PrimeChecker implements Runnable {
 

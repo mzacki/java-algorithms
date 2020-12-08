@@ -2,7 +2,7 @@ package edu.ant.algorithms.concurrency.multithreading.runner;
 
 
 import edu.ant.algorithms.math.fibonacci.FibonacciFormula;
-import edu.ant.algorithms.utils.logger.LoggingService;
+import edu.ant.utils.logger.LoggingService;
 
 /**
  * Created by Matt on 04.11.2018 at 19:24.

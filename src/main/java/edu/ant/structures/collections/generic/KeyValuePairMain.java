@@ -1,6 +1,6 @@
-package edu.ant.algorithms.collections.generic;
+package edu.ant.structures.collections.generic;
 
-import edu.ant.algorithms.utils.logger.LoggingService;
+import edu.ant.utils.logger.LoggingService;
 
 public class KeyValuePairMain {
 

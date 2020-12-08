@@ -1,4 +1,4 @@
-package edu.ant.algorithms.utils.logger;
+package edu.ant.utils.logger;
 
 
 import org.slf4j.Logger;
