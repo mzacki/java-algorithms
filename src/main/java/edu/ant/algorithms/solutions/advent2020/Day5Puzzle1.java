@@ -2,16 +2,19 @@ package edu.ant.algorithms.solutions.advent2020;
 
 import edu.ant.utils.logger.LoggingService;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Day5Puzzle1 {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         InputStream is = Day5Puzzle1.class.getClassLoader().getResourceAsStream("advent2020/input5.txt");
         List<String> input = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8))
                 .lines()
@@ -24,6 +27,23 @@ public class Day5Puzzle1 {
                 .orElseThrow();
 
         LoggingService.logTwoArgs(max);
+
+        // min value is needed for Day5Puzzle2
+
+        Integer min = input.stream()
+                .map(Day5Puzzle1::toId)
+                .mapToInt(v -> v)
+                .min()
+                .orElseThrow();
+
+        LoggingService.logTwoArgs(min);
+
+        // print out ids needed for Day5Puzzle2
+        List<String> output = input.stream().map(Day5Puzzle1::toId).map(Object::toString).collect(Collectors.toList());
+        try (PrintWriter pw = new PrintWriter(
+                "src/main/resources/advent2020/output5.txt", StandardCharsets.UTF_8)) {
+            output.forEach(pw::println);
+        }
     }
 
     private static int toId(String s) {
