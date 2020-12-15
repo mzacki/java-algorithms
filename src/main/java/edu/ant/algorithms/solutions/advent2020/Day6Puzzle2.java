@@ -30,8 +30,9 @@ public class Day6Puzzle2 {
             group.add(s);
         }
 
-        List<Integer> joint = answers.stream()
+        Long result = answers.stream()
                 .map(a -> {
+
                     int size = a.size();
                     StringBuilder sb = new StringBuilder();
                     a.forEach(sb::append);
@@ -41,16 +42,19 @@ public class Day6Puzzle2 {
                     for (int i = 0; i < array.length; i++) {
                         list.add(array[i]);
                     }
-                    return list.stream().filter(e -> list.stream().filter(x -> x.equals(e)).count() == size).distinct().collect(Collectors.toList());
+
+                    return list.stream()
+                            .filter(e -> list.stream()
+                                    .filter(x -> x.equals(e))
+                                    .count() == size)
+                            .distinct()
+                            .collect(Collectors.toList());
                 })
                 .map(List::size)
-                .collect(Collectors.toList());
-
-        Long result = joint.stream().mapToLong(Integer::longValue)
+                .mapToLong(Integer::longValue)
                 .sum();
 
         LoggingService.logMessage(result);
-
     }
 
 }
