@@ -26,7 +26,7 @@ public class Day1Puzzle2 {
         longs.forEach(l -> longs.forEach(m -> longs.stream()
                 .filter(n -> n + m + l == 2020).forEach(n -> threesomes.add(new ArrayList<>(Arrays.asList(n, m, l))))));
 
-        threesomes.forEach(LoggingService::logMessage);
+        threesomes.forEach(LoggingService::logMsg);
 
         // getting the result
         List<Long> result = threesomes.stream()
@@ -35,7 +35,7 @@ public class Day1Puzzle2 {
                 .distinct()
                 .collect(Collectors.toList());
 
-        result.forEach(LoggingService::logMessage);
+        result.forEach(LoggingService::logMsg);
     }
 
 }

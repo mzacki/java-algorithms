@@ -38,7 +38,7 @@ public class Day5Puzzle2 {
                 .filter(s -> s > 46) // min taken seat id from previous puzzle
                 .collect(Collectors.toList());
 
-        freeSeats.forEach(LoggingService::logMessage);
+        freeSeats.forEach(LoggingService::logMsg);
     }
 
 }

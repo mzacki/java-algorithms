@@ -54,7 +54,7 @@ public class Day6Puzzle2 {
                 .mapToLong(Integer::longValue)
                 .sum();
 
-        LoggingService.logMessage(result);
+        LoggingService.logMsg(result);
     }
 
 }

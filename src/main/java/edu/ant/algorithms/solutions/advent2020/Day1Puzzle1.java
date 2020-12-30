@@ -35,7 +35,7 @@ public class Day1Puzzle1 {
                 .distinct()
                 .collect(Collectors.toList());
 
-        result.forEach(LoggingService::logMessage);
+        result.forEach(LoggingService::logMsg);
     }
 
 }

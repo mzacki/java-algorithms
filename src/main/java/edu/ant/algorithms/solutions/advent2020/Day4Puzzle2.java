@@ -60,7 +60,7 @@ public class Day4Puzzle2 {
                 .filter(s -> validate(s, PASS_ID))
                 .collect(Collectors.toList());
 
-        LoggingService.logMessage(valids.size());
+        LoggingService.logMsg(valids.size());
     }
 
     private static boolean validate(String s, String exp) {

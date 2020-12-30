@@ -8,8 +8,8 @@ public class MainThreadExample {
 
     public static void main(String[] args) {
 
-        LoggingService.logMessage("Starting main thread....");
-        LoggingService.logMessage("Main thread wrote this. Please wait " + SLEEP/1000 + " seconds");
+        LoggingService.logMsg("Starting main thread....");
+        LoggingService.logMsg("Main thread wrote this. Please wait " + SLEEP/1000 + " seconds");
 
         // Example of use - static Thread.sleep method
         // One, main thread of application is waiting for given time
@@ -24,7 +24,7 @@ public class MainThreadExample {
             Thread.currentThread().interrupt();
         }
 
-        LoggingService.logMessage("After thread sleep: Main thread wrote this.");
+        LoggingService.logMsg("After thread sleep: Main thread wrote this.");
     }
 
 }

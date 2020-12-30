@@ -1,4 +1,4 @@
-package edu.ant.structures.collections.generic;
+package edu.ant.structures.collections.generic.queue;
 
 import java.util.AbstractQueue;
 import java.util.Iterator;
@@ -6,7 +6,7 @@ import java.util.LinkedList;
 
 public class AbstractQueueImpl<T> extends AbstractQueue<T> {
 
-    private LinkedList<T> items;
+    private final LinkedList<T> items;
 
     public AbstractQueueImpl() {
         this.items = new LinkedList<>();

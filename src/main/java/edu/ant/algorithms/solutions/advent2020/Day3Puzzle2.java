@@ -26,13 +26,13 @@ public class Day3Puzzle2 {
         int rightSeven = getSlope(RIGHT_7, DOWN_1);
         int downTwo = getSlope(RIGHT_1, DOWN_2);
 
-        LoggingService.logMessage(rightOne);
-        LoggingService.logMessage(rightThree);
-        LoggingService.logMessage(rightFive);
-        LoggingService.logMessage(rightSeven);
-        LoggingService.logMessage(downTwo);
-        LoggingService.logMessage("=======");
-        LoggingService.logMessage((long) rightOne * rightThree * rightFive * rightSeven * downTwo);
+        LoggingService.logMsg(rightOne);
+        LoggingService.logMsg(rightThree);
+        LoggingService.logMsg(rightFive);
+        LoggingService.logMsg(rightSeven);
+        LoggingService.logMsg(downTwo);
+        LoggingService.logMsg("=======");
+        LoggingService.logMsg((long) rightOne * rightThree * rightFive * rightSeven * downTwo);
 
     }
 

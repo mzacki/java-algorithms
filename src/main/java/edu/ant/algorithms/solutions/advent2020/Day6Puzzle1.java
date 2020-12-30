@@ -50,7 +50,7 @@ public class Day6Puzzle1 {
                 .mapToLong(Long::longValue)
                 .sum();
 
-        LoggingService.logMessage(joint);
+        LoggingService.logMsg(joint);
     }
 
 }

@@ -1,4 +1,4 @@
-package edu.ant.structures.collections.generic;
+package edu.ant.structures.collections.generic.queue;
 
 import edu.ant.utils.logger.LoggingService;
 
@@ -12,23 +12,23 @@ public class AbstractQueueImplMain {
         queue.offer("Last");
 
         // First in, first out (FIFO queue)
-        LoggingService.logMessage(queue.toString());
+        LoggingService.logMsg(queue.toString());
         // takes first
         queue.poll();
-        LoggingService.logMessage(queue.toString());
+        LoggingService.logMsg(queue.toString());
 
         // selects but element remains intact
         String s = queue.peek();
-        LoggingService.logMessage(s);
-        LoggingService.logMessage(queue.toString());
+        LoggingService.logMsg(s);
+        LoggingService.logMsg(queue.toString());
 
         // adds at the end
         queue.offer("Very last");
-        LoggingService.logMessage(queue.toString());
+        LoggingService.logMsg(queue.toString());
 
         // takes out what is now first, leaves the rest
         queue.poll();
-        LoggingService.logMessage(queue.toString());
+        LoggingService.logMsg(queue.toString());
     }
 
 }

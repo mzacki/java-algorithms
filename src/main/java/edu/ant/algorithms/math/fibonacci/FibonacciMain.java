@@ -29,7 +29,7 @@ public class FibonacciMain {
             FibonacciFormula fibonacciFormula = new FibonacciFormula();
             int element = fibonacciFormula.countElement(n);
             list1.add(element);
-            LoggingService.logMessage(element);
+            LoggingService.logMsg(element);
         }
     }
 
@@ -68,8 +68,8 @@ public class FibonacciMain {
             Thread.currentThread().interrupt();
         }
 
-        LoggingService.logMessage(list1.toString());
-        LoggingService.logMessage(list2.toString());
+        LoggingService.logMsg(list1.toString());
+        LoggingService.logMsg(list2.toString());
     }
 
 }

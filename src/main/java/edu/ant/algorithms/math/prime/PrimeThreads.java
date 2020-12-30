@@ -21,9 +21,9 @@ public class PrimeThreads {
             try {
                 long count = i;
                 finder[i] = new PrimeFinder(count);
-                LoggingService.logMessage("Searching for the prime number " + count);
+                LoggingService.logMsg("Searching for the prime number " + count);
             } catch (NumberFormatException e) {
-                LoggingService.logMessage("Exception: " + e.getMessage());
+                LoggingService.logMsg("Exception: " + e.getMessage());
             }
         }
 
@@ -51,6 +51,6 @@ public class PrimeThreads {
     }
 
     private void displayResult(PrimeFinder finder) {
-        LoggingService.logMessage(finder.getTarget() + " prime number is " + finder.getPrime());
+        LoggingService.logMsg(finder.getTarget() + " prime number is " + finder.getPrime());
     }
 }

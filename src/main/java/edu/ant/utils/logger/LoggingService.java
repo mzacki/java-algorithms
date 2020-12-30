@@ -1,6 +1,5 @@
 package edu.ant.utils.logger;
 
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -10,7 +9,7 @@ public class LoggingService {
 
     private LoggingService() {}
 
-    public static void logMessage(Object... args) {
+    public static void logMsg(Object... args) {
         LOG.info("Logging service msg: {}", args);
     }
 
@@ -24,6 +23,10 @@ public class LoggingService {
 
     public static Logger getLogger() {
         return LOG;
+    }
+
+    public static void logError(Exception e) {
+        LOG.error("ERROR {} {}", e.getClass().getName(), e.getMessage());
     }
 
 }

@@ -27,7 +27,7 @@ public class Functional {
     public static void main(String[] args) {
 
         // implemented own custom functional interface with void() method
-        CustomFunctional customFunctional = LoggingService::logMessage;
+        CustomFunctional customFunctional = LoggingService::logMsg;
 
         // Consumer within Consumer
         Consumer<List<String>> stringConsumer = p -> p.forEach(customFunctional::display);

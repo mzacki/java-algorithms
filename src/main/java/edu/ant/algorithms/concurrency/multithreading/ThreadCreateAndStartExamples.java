@@ -14,7 +14,7 @@ public class ThreadCreateAndStartExamples {
         Thread thread = new Thread() {
             @Override
             public void run() {
-                LoggingService.logMessage("Thread object as anonymous class....");
+                LoggingService.logMsg("Thread object as anonymous class....");
             }
         };
         thread.start();
@@ -23,7 +23,7 @@ public class ThreadCreateAndStartExamples {
          * Thread class object invoked as lambda
          * */
 
-        Thread lambdaThread = new Thread(() -> LoggingService.logMessage("Thread object as lambda...."));
+        Thread lambdaThread = new Thread(() -> LoggingService.logMsg("Thread object as lambda...."));
         lambdaThread.start();
 
         /**
@@ -40,7 +40,7 @@ public class ThreadCreateAndStartExamples {
         Runnable runnable = new Runnable() {
             @Override
             public void run() {
-                LoggingService.logMessage("Runnable....");
+                LoggingService.logMsg("Runnable....");
             }
         };
         runnable.run();
@@ -49,7 +49,7 @@ public class ThreadCreateAndStartExamples {
          * Lambda implementation of Runnable interface.
          * */
 
-        Runnable runnableLambda = () -> LoggingService.logMessage("Runnable as lambda...");
+        Runnable runnableLambda = () -> LoggingService.logMsg("Runnable as lambda...");
         runnableLambda.run();
 
     }
@@ -58,7 +58,7 @@ public class ThreadCreateAndStartExamples {
 
         @Override
         public void run() {
-            LoggingService.logMessage("Custom class extends Thread class...");
+            LoggingService.logMsg("Custom class extends Thread class...");
         }
     }
 

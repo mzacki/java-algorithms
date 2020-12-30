@@ -14,7 +14,7 @@ public class Runner extends Thread {
         FibonacciFormula fibo = new FibonacciFormula();
         for (int i = 0; i < 10; i++) {
 
-            LoggingService.logMessage(fibo.countElement(i));
+            LoggingService.logMsg(fibo.countElement(i));
 
             try {
                 Thread.sleep(1000);

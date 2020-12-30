@@ -23,7 +23,7 @@ public class Day2Puzzle1 {
                 .filter(Day2Puzzle1::validate)
                 .count();
 
-        LoggingService.logMessage(result);
+        LoggingService.logMsg(result);
 
     }
 

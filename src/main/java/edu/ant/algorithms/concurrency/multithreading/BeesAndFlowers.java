@@ -41,8 +41,8 @@ public class BeesAndFlowers {
     private boolean pollinateFreeFlower(String name) {
         pollinated.getAndIncrement();
         report(name);
-        LoggingService.logMessage(name + " is landing on the flower no." + pollinated);
-        LoggingService.logMessage(flowers.intValue() - pollinated.intValue() + " free flowers left.");
+        LoggingService.logMsg(name + " is landing on the flower no." + pollinated);
+        LoggingService.logMsg(flowers.intValue() - pollinated.intValue() + " free flowers left.");
         return true;
     }
 
@@ -62,7 +62,7 @@ public class BeesAndFlowers {
     }
 
     private boolean logNoFlowersLeft(){
-        LoggingService.logMessage("No free flowers left.");
+        LoggingService.logMsg("No free flowers left.");
         showResults();
         try {
             Thread.sleep(100000);
@@ -74,7 +74,7 @@ public class BeesAndFlowers {
 
     private void showResults() {
         stats.forEach((k, v) ->
-                LoggingService.logMessage(k + ": " + v + " flowers"));
+                LoggingService.logMsg(k + ": " + v + " flowers"));
     }
 
 }

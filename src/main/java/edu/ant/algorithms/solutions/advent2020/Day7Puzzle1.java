@@ -179,19 +179,19 @@ public class Day7Puzzle1 {
                .distinct()
                .count();
 
-        LoggingService.logMessage("counter: " + Arrays.toString(counter));
-        LoggingService.logMessage("keys to check" + keysToCheck);
-        LoggingService.logMessage("keys to check" + keysToCheck2);
-        LoggingService.logMessage("keys to check" + keysToCheck3);
-        LoggingService.logMessage("keys to check" + keysToCheck4);
-        LoggingService.logMessage("keys to check" + keysToCheck5);
-        LoggingService.logMessage("keys to check" + keysToCheck6);
-        LoggingService.logMessage("keys to check" + keysToCheck7);
-        LoggingService.logMessage("keys to check" + keysToCheck8);
-        LoggingService.logMessage("keys to check" + keysToCheck9);
-        LoggingService.logMessage("keys to check" + keysToCheck10);
+        LoggingService.logMsg("counter: " + Arrays.toString(counter));
+        LoggingService.logMsg("keys to check" + keysToCheck);
+        LoggingService.logMsg("keys to check" + keysToCheck2);
+        LoggingService.logMsg("keys to check" + keysToCheck3);
+        LoggingService.logMsg("keys to check" + keysToCheck4);
+        LoggingService.logMsg("keys to check" + keysToCheck5);
+        LoggingService.logMsg("keys to check" + keysToCheck6);
+        LoggingService.logMsg("keys to check" + keysToCheck7);
+        LoggingService.logMsg("keys to check" + keysToCheck8);
+        LoggingService.logMsg("keys to check" + keysToCheck9);
+        LoggingService.logMsg("keys to check" + keysToCheck10);
 
-        LoggingService.logMessage(result);
+        LoggingService.logMsg(result);
     }
 
 }

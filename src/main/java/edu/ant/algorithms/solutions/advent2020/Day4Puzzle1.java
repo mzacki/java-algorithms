@@ -38,7 +38,7 @@ public class Day4Puzzle1 {
             sb.append(input.get(i));
         }
 
-        LoggingService.logMessage(passports.size());
+        LoggingService.logMsg(passports.size());
 
         long valid = passports.stream()
                 .filter(s -> s.contains(BIRTH_YEAR))
@@ -50,9 +50,9 @@ public class Day4Puzzle1 {
                 .filter((s -> s.contains(PASS_ID)))
                 .count();
 
-        LoggingService.logMessage(valid);
+        LoggingService.logMsg(valid);
 
-        passports.forEach(s -> LoggingService.logMessage(s));
+        passports.forEach(s -> LoggingService.logMsg(s));
     }
 
 

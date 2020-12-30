@@ -33,7 +33,7 @@ public class Day3Puzzle1 {
             }
         }
 
-        LoggingService.logMessage(characterList.size());
+        LoggingService.logMsg(characterList.size());
 
     }
 

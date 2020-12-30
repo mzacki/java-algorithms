@@ -6,27 +6,27 @@ import java.util.Scanner;
 public class FiboRecursionVsFormula {
 
     public static void main(String[] args) {
-        LoggingService.logMessage("Algorithm speed comparator");
-        LoggingService.logMessage("----------------------------------------");
-        LoggingService.logMessage("Recursion vs mathematic formula");
-        LoggingService.logMessage("\nWrite which n-th element of Fibonacci sequence you wish to count (and press Enter)");
+        LoggingService.logMsg("Algorithm speed comparator");
+        LoggingService.logMsg("----------------------------------------");
+        LoggingService.logMsg("Recursion vs mathematic formula");
+        LoggingService.logMsg("\nWrite which n-th element of Fibonacci sequence you wish to count (and press Enter)");
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
-        LoggingService.logMessage("Thank you");
+        LoggingService.logMsg("Thank you");
         scan.close();
-        LoggingService.logMessage("\nCounting...");
-        LoggingService.logMessage("\nGolden ration (a.k.a. PHI number): " + PHI);
+        LoggingService.logMsg("\nCounting...");
+        LoggingService.logMsg("\nGolden ration (a.k.a. PHI number): " + PHI);
         long start = System.currentTimeMillis();
-        LoggingService.logMessage("\nCounting recursively...");
-        LoggingService.logMessage(n + "th element is " + fibonacciRecursive(n));
+        LoggingService.logMsg("\nCounting recursively...");
+        LoggingService.logMsg(n + "th element is " + fibonacciRecursive(n));
         long end = System.currentTimeMillis() - start;
-        LoggingService.logMessage("Time (ms): " + end);
-        LoggingService.logMessage("\nCounting with formula...");
+        LoggingService.logMsg("Time (ms): " + end);
+        LoggingService.logMsg("\nCounting with formula...");
         long start2 = System.currentTimeMillis();
-        LoggingService.logMessage(n + "th element is " + fibonacciFormula(n));
+        LoggingService.logMsg(n + "th element is " + fibonacciFormula(n));
         long end2 = System.currentTimeMillis() - start2;
-        LoggingService.logMessage("Time (ms): " + end2);
-        LoggingService.logMessage("Thank you for your attention Sir / Madam.");
+        LoggingService.logMsg("Time (ms): " + end2);
+        LoggingService.logMsg("Thank you for your attention Sir / Madam.");
     }
 
     public static final double PHI = (1 + Math.sqrt(5)) / 2;

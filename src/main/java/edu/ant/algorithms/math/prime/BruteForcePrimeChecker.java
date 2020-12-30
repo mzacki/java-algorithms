@@ -8,7 +8,7 @@ public class BruteForcePrimeChecker {
 
         for (int i = 1; i < 100; i++) {
             if (check(i)) {
-                LoggingService.logMessage(i + " " + check(i));
+                LoggingService.logMsg(i + " " + check(i));
             }
         }
 

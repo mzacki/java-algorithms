@@ -1,4 +1,4 @@
-package edu.ant.structures.collections.generic;
+package edu.ant.structures.collections.generic.pair;
 
 import edu.ant.utils.logger.LoggingService;
 
@@ -8,8 +8,8 @@ public class KeyValuePairMain {
 
         KeyValuePair<String, Boolean> booleStrPair = new KeyValuePair<>("isOK", true);
 
-        LoggingService.logMessage("Key: " + booleStrPair.getKey());
-        LoggingService.logMessage("Value: " + booleStrPair.getValue());
+        LoggingService.logMsg("Key: " + booleStrPair.getKey());
+        LoggingService.logMsg("Value: " + booleStrPair.getValue());
 
     }
 

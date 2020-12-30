@@ -13,7 +13,7 @@ public class RunnerInterface implements Runnable {
         FibonacciFormula fibo = new FibonacciFormula();
         for (int i = 0; i < 10; i++) {
 
-            LoggingService.logMessage(fibo.countElement(i));
+            LoggingService.logMsg(fibo.countElement(i));
 
             try {
                 Thread.sleep(1000);

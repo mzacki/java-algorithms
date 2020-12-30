@@ -33,7 +33,7 @@ public class PrimeFinder implements Runnable {
     }
 
     public static void main(String[] args) {
-        LoggingService.logMessage(isPrime(7));
+        LoggingService.logMsg(isPrime(7));
     }
 
     public void run() {

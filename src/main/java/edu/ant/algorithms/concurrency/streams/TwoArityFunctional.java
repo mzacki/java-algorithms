@@ -47,7 +47,7 @@ public class TwoArityFunctional {
                 .map(Entry::getValue)
                 .collect(Collectors.toList());
 
-        ranking.forEach(LoggingService::logMessage);
+        ranking.forEach(LoggingService::logMsg);
 
     }
 

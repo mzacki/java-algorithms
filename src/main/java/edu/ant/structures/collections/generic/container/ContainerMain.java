@@ -1,4 +1,4 @@
-package edu.ant.structures.collections.generic;
+package edu.ant.structures.collections.generic.container;
 
 import edu.ant.utils.logger.LoggingService;
 
@@ -7,13 +7,13 @@ public class ContainerMain {
     public static void main(String[] args) {
 
         Container<String> strContainer = new Container<>("item");
-        LoggingService.logMessage(strContainer.getItem());
+        LoggingService.logMsg(strContainer.getItem());
 
         Container<Boolean> booleContainer = new Container<>(true);
-        LoggingService.logMessage(booleContainer.getItem());
+        LoggingService.logMsg(booleContainer.getItem());
 
         Container<Long> longContainer = new Container<>(10L);
-        LoggingService.logMessage(longContainer.getItem());
+        LoggingService.logMsg(longContainer.getItem());
     }
 
 }

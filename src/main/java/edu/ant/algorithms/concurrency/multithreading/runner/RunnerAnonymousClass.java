@@ -15,7 +15,7 @@ public class RunnerAnonymousClass {
             FibonacciRecursive fibonacciRecursive = new FibonacciRecursive();
             for (int i = 10; i < 100; i = i+10) {
 
-                LoggingService.logMessage(fibonacciRecursive.countElement(i));
+                LoggingService.logMsg(fibonacciRecursive.countElement(i));
 
                 try {
                     Thread.sleep(1000);
