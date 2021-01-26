@@ -17,9 +17,9 @@ public class LinearSearch extends SearchAlgorithm {
     @Override
     public int search() {
         for (int i = 0; i < getInput().length; i++) {
+            setStep(getStep() + 1);
             if (getInput()[i] == getTarget()) {
                 setIndexOfFound(i);
-                setStep(i + 1);
                 return i;
             }
         }

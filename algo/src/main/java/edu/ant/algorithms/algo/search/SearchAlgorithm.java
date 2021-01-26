@@ -13,7 +13,7 @@ public abstract class SearchAlgorithm {
         this.input = input;
         this.target = target;
         this.indexOfFound = -1;
-        this.step = -1;
+        this.step = 0;
     }
 
     public int[] getInput() {
