@@ -2,7 +2,12 @@ package edu.ant.algorithms.algo.search.binary;
 
 import edu.ant.algorithms.algo.search.SearchAlgorithm;
 import edu.ant.algorithms.math.logarithm.Logarithm;
-import java.util.Arrays;
+
+/**
+ * Constraints:
+ * - data must be sorted
+ * - time complexity equals O(log2 n)
+ * */
 
 public class BinarySearch extends SearchAlgorithm {
 
