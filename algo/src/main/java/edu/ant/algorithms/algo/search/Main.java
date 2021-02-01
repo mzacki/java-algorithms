@@ -1,5 +1,6 @@
 package edu.ant.algorithms.algo.search;
 
+import edu.ant.algorithms.algo.search.binary.BinarySearch;
 import edu.ant.algorithms.algo.search.linear.LinearSearch;
 import edu.ant.patterns.utils.logger.LoggingService;
 
@@ -10,6 +11,9 @@ public class Main {
         LinearSearch linearSearch = new LinearSearch(array, 8);
         linearSearch.search();
         LoggingService.logMsg(linearSearch);
+        BinarySearch binarySearch = new BinarySearch(array, 8);
+        binarySearch.search();
+        LoggingService.logMsg(binarySearch);
     }
 
 }
