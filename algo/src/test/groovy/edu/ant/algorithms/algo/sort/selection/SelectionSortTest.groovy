@@ -17,7 +17,7 @@ class SelectionSortTest extends Specification {
         result == [0, 1, 2, 4, 7, 9, 12, 34, 76]
     }
 
-    def "should revers sort input"() {
+    def "should reverse sort input"() {
         given:
         SelectionSort selectionSort = new SelectionSort(input)
 

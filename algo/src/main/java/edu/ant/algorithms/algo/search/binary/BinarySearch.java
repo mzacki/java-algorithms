@@ -6,7 +6,7 @@ import edu.ant.algorithms.math.logarithm.Logarithm;
 /**
  * Constraints:
  * - data must be sorted
- * - time complexity equals O(log2 n)
+ * - time complexity equals O(log n)
  * */
 
 public class BinarySearch extends SearchAlgorithm {
