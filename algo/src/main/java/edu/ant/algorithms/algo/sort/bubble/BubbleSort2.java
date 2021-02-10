@@ -2,6 +2,15 @@ package edu.ant.algorithms.algo.sort.bubble;
 
 import edu.ant.algorithms.algo.sort.Sorter;
 
+/**
+ * Big-O: different scale of time complexity of various algorithms:
+ * O(1) -> constant
+ * O(log n) -> logarithmic
+ * O(n) -> linear
+ * O(n * log n) -> n log-star n
+ * O(n * n) -> quadratic
+ */
+
 public class BubbleSort2 implements Sorter {
 
     private final int[] input;

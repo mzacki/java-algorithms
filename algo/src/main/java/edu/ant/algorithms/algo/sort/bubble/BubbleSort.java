@@ -9,25 +9,25 @@ import edu.ant.algorithms.algo.sort.Sorter;
 
 public class BubbleSort implements Sorter {
 
-    private int unsortedPartitionIndex;
+    private int lastUnsortedIndex;
     private final int[] input;
 
     public BubbleSort(int[] input) {
         this.input = input;
-        unsortedPartitionIndex = input.length - 1;
+        lastUnsortedIndex = input.length - 1;
     }
 
     @Override
     public int[] sort() {
 
-        while (unsortedPartitionIndex > 0) {
+        while (lastUnsortedIndex > 0) {
 
-            for (int i = 0; i < unsortedPartitionIndex; i++) {
+            for (int i = 0; i < lastUnsortedIndex; i++) {
                 if (input[i] > input[i + 1]) {
                     swap(i, i + 1);
                 }
             }
-            unsortedPartitionIndex--;
+            lastUnsortedIndex--;
         }
 
         return input;
@@ -36,14 +36,14 @@ public class BubbleSort implements Sorter {
     @Override
     public int[] reverseSort() {
 
-        while (unsortedPartitionIndex > 0) {
+        while (lastUnsortedIndex > 0) {
 
-            for (int i = 0; i < unsortedPartitionIndex; i++) {
+            for (int i = 0; i < lastUnsortedIndex; i++) {
                 if (input[i] < input[i + 1]) {
                     swap(i, i + 1);
                 }
             }
-            unsortedPartitionIndex--;
+            lastUnsortedIndex--;
         }
 
         return input;
