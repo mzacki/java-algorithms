@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         int[] input = {4, 7, 1, 2, 9, 34, 76, 12, 0};
         SelectionSort selectionSort = new SelectionSort(input);
-       // LoggingService.logMsg((Object) selectionSort.sort());
+        LoggingService.logMsg((Object) selectionSort.sort());
 
         BubbleSort bubbleSort = new BubbleSort(input);
         LoggingService.logMsg((Object) bubbleSort.sort());

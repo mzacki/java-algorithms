@@ -24,7 +24,7 @@ public class BubbleSort implements Sorter {
 
             for (int i = 0; i < lastUnsortedIndex; i++) {
                 if (input[i] > input[i + 1]) {
-                    swap(i, i + 1);
+                    swap(input, i, i + 1);
                 }
             }
             lastUnsortedIndex--;
@@ -40,19 +40,13 @@ public class BubbleSort implements Sorter {
 
             for (int i = 0; i < lastUnsortedIndex; i++) {
                 if (input[i] < input[i + 1]) {
-                    swap(i, i + 1);
+                    swap(input, i, i + 1);
                 }
             }
             lastUnsortedIndex--;
         }
 
         return input;
-    }
-
-    private void swap(int i, int j) {
-        int temp = input[j];
-        input[j] = input[i];
-        input[i] = temp;
     }
 
 }

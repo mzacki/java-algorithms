@@ -26,7 +26,7 @@ public class SelectionSort implements Sorter {
             for (int j = i + 1; j < input.length; j++) {
 
                 if (input[j] < input[minIndex]) {
-                   swap(j, minIndex);
+                   swap(input, j, minIndex);
                 }
             }
             minIndex++;
@@ -44,18 +44,12 @@ public class SelectionSort implements Sorter {
             for (int j = i + 1; j < input.length; j++) {
 
                 if (input[j] > input[maxIndex]) {
-                    swap(j, maxIndex);
+                    swap(input, j, maxIndex);
                 }
             }
             maxIndex++;
         }
         return input;
-    }
-
-    private void swap(int j, int minOrMaxIndex) {
-        int temp = input[minOrMaxIndex];
-        input[minOrMaxIndex] = input[j];
-        input[j] = temp;
     }
 
 }

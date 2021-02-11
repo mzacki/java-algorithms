@@ -34,7 +34,7 @@ public class BubbleSort3 implements Sorter {
         return input;
     }
 
-    private void swap(int[] array, int i, int j) {
+    public void swap(int[] array, int i, int j) {
         if (i == j) {
             return;
         }

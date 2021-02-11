@@ -24,7 +24,7 @@ public class BubbleSort2 implements Sorter {
         for (int i = 0; i < input.length - 1; i++) {
             for (int j = 0; j < input.length - i - 1; j++) {
                 if (input[j + 1] < input[j]) {
-                    swap(j + 1, j);
+                    swap(input, j + 1, j);
                 }
             }
         }
@@ -36,17 +36,11 @@ public class BubbleSort2 implements Sorter {
         for (int i = 0; i < input.length - 1; i++) {
             for (int j = 0; j < input.length - i - 1; j++) {
                 if (input[j + 1] > input[j]) {
-                    swap(j + 1, j);
+                    swap(input, j + 1, j);
                 }
             }
         }
         return input;
-    }
-
-    private void swap(int i, int j) {
-        int temp = input[j];
-        input[j] = input[i];
-        input[i] = temp;
     }
 
 }

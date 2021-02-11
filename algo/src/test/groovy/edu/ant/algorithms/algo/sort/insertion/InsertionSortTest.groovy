@@ -1,6 +1,6 @@
 package edu.ant.algorithms.algo.sort.insertion
 
-import edu.ant.algorithms.algo.sort.bubble.BubbleSort
+
 import spock.lang.Specification
 
 class InsertionSortTest extends Specification {
