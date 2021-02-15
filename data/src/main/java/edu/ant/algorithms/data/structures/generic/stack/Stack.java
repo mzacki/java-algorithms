@@ -1,4 +1,4 @@
-package edu.ant.algorithms.data.structures.collections.generic.stack;
+package edu.ant.algorithms.data.structures.generic.stack;
 
 public interface Stack<T> {
 

@@ -1,4 +1,4 @@
-package edu.ant.algorithms.data.structures.collections.generic.queue;
+package edu.ant.algorithms.data.structures.generic.queue;
 
 import java.util.AbstractQueue;
 import java.util.Iterator;

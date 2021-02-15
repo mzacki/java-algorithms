@@ -1,4 +1,4 @@
-package edu.ant.algorithms.data.structures.collections.generic.container;
+package edu.ant.algorithms.data.structures.generic.container;
 
 import edu.ant.patterns.utils.logger.LoggingService;
 

@@ -1,4 +1,4 @@
-package edu.ant.algorithms.data.structures.collections.generic.pair;
+package edu.ant.algorithms.data.structures.generic.pair;
 
 public class KeyValuePair<S, T> {
 
