@@ -13,8 +13,8 @@ public class InsertionSort2 implements Sorter {
     @Override
     public int[] sort() {
 
-        for (int i = 1; i < input.length; i++) {
-            int j = i;
+        for (int lastSortedIndex = 1; lastSortedIndex < input.length; lastSortedIndex++) {
+            int j = lastSortedIndex;
             while (j > 0 && input[j] < input[j - 1]) {
                 swap(input, j, j - 1);
                 j--;
@@ -27,8 +27,8 @@ public class InsertionSort2 implements Sorter {
     @Override
     public int[] reverseSort() {
 
-        for (int i = 1; i < input.length; i++) {
-            int j = i;
+        for (int lastSortedIndex = 1; lastSortedIndex < input.length; lastSortedIndex++) {
+            int j = lastSortedIndex;
             while (j > 0 && input[j] > input[j - 1]) {
                 swap(input, j, j - 1);
                 j--;
