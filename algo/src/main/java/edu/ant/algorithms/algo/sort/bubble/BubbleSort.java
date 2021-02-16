@@ -5,6 +5,7 @@ import edu.ant.algorithms.algo.sort.Sorter;
 /**
  * O(n * n)
  * In-place algorithm
+ * Stable algorithm
  * */
 
 public class BubbleSort implements Sorter {
@@ -23,6 +24,7 @@ public class BubbleSort implements Sorter {
         while (lastUnsortedIndex > 0) {
 
             for (int i = 0; i < lastUnsortedIndex; i++) {
+                // WARNING! using >= or <= would make it unstable!
                 if (input[i] > input[i + 1]) {
                     swap(input, i, i + 1);
                 }
