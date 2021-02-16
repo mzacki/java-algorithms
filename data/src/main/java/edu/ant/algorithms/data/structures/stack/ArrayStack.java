@@ -1,4 +1,4 @@
-package edu.ant.algorithms.data.structures.generic.stack;
+package edu.ant.algorithms.data.structures.stack;
 
 import java.util.Arrays;
 

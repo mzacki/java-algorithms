@@ -1,4 +1,4 @@
-package edu.ant.algorithms.data.structures.generic.queue;
+package edu.ant.algorithms.data.structures.queue.generic;
 
 import edu.ant.patterns.utils.logger.LoggingService;
 
