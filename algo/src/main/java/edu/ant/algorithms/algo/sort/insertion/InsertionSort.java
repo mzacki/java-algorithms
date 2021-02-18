@@ -2,6 +2,12 @@ package edu.ant.algorithms.algo.sort.insertion;
 
 import edu.ant.algorithms.algo.sort.Sorter;
 
+/**
+ * O(n * n) - quadratic complexity
+ * In-place algorithm
+ * Stable algorithm
+ * */
+
 public class InsertionSort implements Sorter {
 
     private final int[] input;
