@@ -24,9 +24,9 @@ public class SelectionSort implements Sorter {
         for (int i = 0; i < input.length - 1; i++) {
 
             for (int j = i + 1; j < input.length; j++) {
-
+                // swapping more than necessary for selection sort
                 if (input[j] < input[minIndex]) {
-                   swap(input, j, minIndex);
+                    swap(input, j, minIndex);
                 }
             }
             minIndex++;
