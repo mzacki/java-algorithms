@@ -22,12 +22,12 @@ public class IntArrayList {
     private int[] items;
 
     public IntArrayList() {
-        items = new int[0];
+       this.items = new int[0];
     }
 
-    public IntArrayList(int[] intput) {
-        this.items = new int[intput.length];
-        System.arraycopy(intput, 0, this.items, 0, intput.length);
+    public IntArrayList(int[] input) {
+        this.items = new int[input.length];
+        System.arraycopy(input, 0, this.items, 0, input.length);
     }
 
     public void add(int newItem) {
