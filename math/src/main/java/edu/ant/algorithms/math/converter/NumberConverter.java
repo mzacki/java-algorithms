@@ -39,4 +39,18 @@ public final class NumberConverter {
                 "0" : binaryBuilder.toString();
     }
 
+    public static long baseToDecimal(String number, int n) {
+        long decimal = 0;
+        int nthPower = 1;
+        // similar to binary conversion but n power customizable
+        for(int digitPosition = number.length() - 1; digitPosition >= 0; digitPosition--) {
+            int digit = number.charAt(digitPosition) - 48; // from ASCII
+            decimal += (long) nthPower * digit;
+            nthPower *= n;
+        }
+        return decimal;
+    }
+
+
+
 }
