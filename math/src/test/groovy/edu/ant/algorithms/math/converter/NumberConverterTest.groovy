@@ -27,4 +27,19 @@ class NumberConverterTest extends Specification {
         binary == "1011110"
     }
 
+    def "should convert base n to decimal"() {
+        expect:
+
+        NumberConverter.baseToDecimal(number, n) == decimal
+
+        where:
+        number     | n | decimal
+        "1011101" | 2   |   93
+        "1011110" | 2   |   94
+        "94"           | 10 |   94
+        "112"         | 8   |   74
+        "764"         | 8   |   500
+        "1000"       | 4   |   64
+    }
+
 }
