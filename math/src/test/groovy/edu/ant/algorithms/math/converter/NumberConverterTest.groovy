@@ -7,13 +7,24 @@ class NumberConverterTest extends Specification {
 
     def "should convert binary to decimal"() {
         given:
-        String binary = "01011101"
+        String binary = "1011101"
 
         when:
         long decimal = NumberConverter.binaryToDecimal(binary)
 
         then:
         decimal == 93L
+    }
+
+    def "should convert decimal to binary"() {
+        given:
+        long decimal = 94L
+
+        when:
+        String binary = NumberConverter.decimalToBinary(decimal)
+
+        then:
+        binary == "1011110"
     }
 
 }

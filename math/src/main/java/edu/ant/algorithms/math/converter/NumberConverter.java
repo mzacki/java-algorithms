@@ -23,4 +23,20 @@ public final class NumberConverter {
         return decimal;
     }
 
+    public static String decimalToBinary(long decimal) {
+        StringBuilder binaryBuilder = new StringBuilder();
+        /**
+         * divide by 2, remainder is least significant bit (LSB)
+         * then divide quotient by 2, remainder is next LSB
+         * repeat until quotient == 1
+         * */
+        while(decimal > 0) {
+            binaryBuilder.insert(0, decimal % 2);
+            decimal /= 2;
+        }
+
+        return binaryBuilder.toString().equals("") ?
+                "0" : binaryBuilder.toString();
+    }
+
 }
