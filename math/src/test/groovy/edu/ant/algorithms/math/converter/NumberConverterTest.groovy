@@ -42,4 +42,6 @@ class NumberConverterTest extends Specification {
         "1000"       | 4   |   64
     }
 
+
+
 }
