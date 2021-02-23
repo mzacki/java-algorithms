@@ -11,7 +11,7 @@ public final class NumberConverter {
      * then 2 to 1st = 2, then 2 to 2nd = 4 and so on.
      * @param binary String representation of binary number
      * @return decimal number (long)
-     * */
+     */
     public static long binaryToDecimal(String binary) {
         long decimal = 0;
         long bitValue = 1;
@@ -44,21 +44,32 @@ public final class NumberConverter {
     }
 
 
-    // supports power of n <= 10
+    /**
+     * supports power of n <= 16 (hex included)
+     * similar to binary conversion but n power customizable
+     * @param number (String)
+     * @param n (int)
+     * @return decimal (long)
+     */
     public static long baseToDecimal(String number, int n) {
         long decimal = 0;
         int nthPower = 1;
-        // similar to binary conversion but n power customizable
+
         for(int digitPosition = number.length() - 1; digitPosition >= 0; digitPosition--) {
-            int digit = number.charAt(digitPosition) - 48; // from ASCII
+            int digit = charToInt(number.toUpperCase().charAt(digitPosition));
             decimal += (long) nthPower * digit;
             nthPower *= n;
         }
         return decimal;
     }
 
-    // similar to decimal to binary but n power customizable
-    // supports power of n <= 10
+    /**
+     * similar to decimal to binary but n power customizable
+     * supports power of n <= 10
+     * @param decimal (long)
+     * @param n (int)
+     * @return String of base n number
+     */
     public static String decimalToBase(long decimal, int n) {
         StringBuilder numberBuilder = new StringBuilder();
         while (decimal > 0) {
@@ -70,6 +81,17 @@ public final class NumberConverter {
     }
 
     // TODO HEX converter (power of n > 10)
+
+    private static int charToInt(char c) {
+        if ((int) c >= 48 && (int) c <= 57) {
+            return (int) c - 48;
+        }
+
+        if ((int) c >= 65 && (int) c <= 70) {
+            return (int) c - 55;
+        }
+        throw new IllegalArgumentException();
+    }
 
 
 
