@@ -1,5 +1,6 @@
 package edu.ant.algorithms.math.converter
 
+
 import spock.lang.Specification
 
 class NumberConverterTest extends Specification {
@@ -27,7 +28,7 @@ class NumberConverterTest extends Specification {
         binary == "1011110"
     }
 
-    def "should convert base n to decimal"() {
+    def "should convert n base number to decimal"() {
         expect:
 
         NumberConverter.baseToDecimal(number, n) == decimal
