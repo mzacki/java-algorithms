@@ -41,6 +41,21 @@ class NumberConverterTest extends Specification {
         "112"         | 8   |   74
         "764"         | 8   |   500
         "1000"       | 4   |   64
+        "FFFFFF"    | 16  |  16777215
+    }
+
+    def "should convert decimal to n base number"() {
+        expect:
+        NumberConverter.decimalToBase(decimal, n) == number
+
+        where:
+        number     | n | decimal
+        "1011101" | 2   |   93
+        "1011110" | 2   |   94
+        "94"           | 10 |   94
+        "112"         | 8   |   74
+        "764"         | 8   |   500
+        "1000"       | 4   |   64
     }
 
 }
