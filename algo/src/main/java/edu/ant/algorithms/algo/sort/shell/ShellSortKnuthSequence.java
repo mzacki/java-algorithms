@@ -1,27 +1,26 @@
 package edu.ant.algorithms.algo.sort.shell;
 
 import edu.ant.algorithms.algo.sort.Sorter;
+import edu.ant.algorithms.math.knuth.KnuthSequence;
 
 /**
- * Insertion sort enhanced by Shell algorithm:
- * O(n * n) (worst case, may behave better depending on the gap
- * unstable
- * in-place
- * modification of bubble sort / insertion sort (less swapping, if gap = 1, it's insertion sort)
- * */
-// TODO improve bubble sort in the same way
-public class ShellSort implements Sorter {
+ * Knuth sequence is considered as the most effective
+ * way to count optimal gap size
+ */
+public class ShellSortKnuthSequence implements Sorter {
 
     private final int[] input;
+    private final int knuthSequenceNumber;
 
-    public ShellSort(int[] input) {
+    public ShellSortKnuthSequence(int[] input) {
         this.input = input;
+        this.knuthSequenceNumber = (int) KnuthSequence.getHighestOfRange(input.length);
     }
 
     @Override
     public int[] sort() {
 
-        for (int gap = input.length / 2; gap > 0; gap /= 2) {
+        for (int gap = knuthSequenceNumber; gap > 0; gap = (gap - 1) / 3) {
 
             for (int i = gap; i < input.length; i++) {
 
@@ -40,7 +39,8 @@ public class ShellSort implements Sorter {
 
     @Override
     public int[] reverseSort() {
-        for (int gap = input.length / 2; gap > 0; gap /= 2) {
+
+        for (int gap = knuthSequenceNumber; gap > 0; gap = (gap - 1) / 3) {
 
             for (int i = gap; i < input.length; i++) {
 
