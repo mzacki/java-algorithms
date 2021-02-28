@@ -31,6 +31,7 @@ public class MergeSort3 implements Sorter {
             // disputable: instead of logical, in-place sort
             // new array is created
             // also comparing is being done in two places
+            // leading to obfuscated code
             if (compare(input[startIndex], input[endIndex], reverse)) {
                 swapSorted(input, startIndex, endIndex);
             }
