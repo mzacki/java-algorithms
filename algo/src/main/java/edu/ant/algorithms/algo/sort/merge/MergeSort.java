@@ -4,8 +4,9 @@ import edu.ant.algorithms.algo.sort.Sorter;
 
 /**
  * divide and conquer:
- * split (logical only, no new instances) and merge recursive !in-place (temp arrays in memory are
- * created)
+ * split (logical only, no new instances) and merge
+ * recursive
+ * !in-place (temp arrays in memory are created)
  * stable
  * O(n * log n)
  */
