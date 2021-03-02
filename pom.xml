@@ -14,6 +14,25 @@
         <module>math</module>
         <module>puzzle</module>
     </modules>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>gmavenplus-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <goals>
+                                <goal>compile</goal>
+                                <goal>testCompile</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <groupId>org.codehaus.gmavenplus</groupId>
+                    <version>1.4</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
     <dependencies>
         <dependency>
             <groupId>edu.ant</groupId>
@@ -40,7 +59,6 @@
             <artifactId>jackson-databind</artifactId>
             <version>[2.10.5.1,)</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-math3 -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-math3</artifactId>
