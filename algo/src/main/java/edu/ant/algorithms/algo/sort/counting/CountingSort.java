@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 
 /**
+ * EXPERIMENTAL VERSION NOT FULLY TESTED
  * for small collections only:
  * number of elements to sort should approx equal their range
  * (e.g. 10 items, 0-10 each)
@@ -85,6 +86,5 @@ public class CountingSort implements Sorter {
         }
         return result;
     }
-
 
 }

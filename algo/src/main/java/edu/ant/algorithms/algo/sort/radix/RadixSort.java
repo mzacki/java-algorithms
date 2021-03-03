@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collections;
 
 /**
+ * EXPERIMENTAL VERSION NOT FULLY TESTED
  * items to sort should have the same radix and width
  * radix - number of distinct characters / digits in number system
  * e.g. decimal - 10, binary - 2 etc.
