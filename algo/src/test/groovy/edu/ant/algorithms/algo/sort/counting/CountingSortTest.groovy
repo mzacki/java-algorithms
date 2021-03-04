@@ -27,6 +27,9 @@ class CountingSortTest extends Specification {
         where:
         input | result
         [13] | [13]
+        // TODO explain why cannot be already sorted
+        // TODO add already sorted case to other algorithms
+        // [3, 2, 1] | [3, 2, 1]
         [2, 13] | [13, 2]
         [56, 33, 8, 456] | [456, 56, 33, 8]
         [13, 4, 0, 7, 22] | [22, 13, 7, 4, 0]
