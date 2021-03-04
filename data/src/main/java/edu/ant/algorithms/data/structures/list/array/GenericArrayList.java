@@ -1,5 +1,6 @@
-package edu.ant.algorithms.data.structures.list;
+package edu.ant.algorithms.data.structures.list.array;
 
+import java.lang.reflect.Array;
 import java.util.NoSuchElementException;
 
 /**
@@ -11,7 +12,7 @@ import java.util.NoSuchElementException;
  * not known, retrieving an item takes O(n) (worst-case)
  */
 
-public class IntArrayList {
+public class GenericArrayList<E> {
 
     /**
      * Time complexity of array operations: - access by index: O(1) - access without index - worst case: O(n) - add new
@@ -19,19 +20,19 @@ public class IntArrayList {
      * add, insert, update, delete of given index: O(1) - delete and shift remaining: O(n)
      */
 
-    private int[] items;
+    private E[] items;
 
-    public IntArrayList() {
-       this.items = new int[0];
+    public GenericArrayList(Class<E> klazz) {
+        this.items = (E[]) Array.newInstance(klazz, 0);
     }
 
-    public IntArrayList(int[] input) {
-        this.items = new int[input.length];
+    public GenericArrayList(E[] input, Class<E> klazz) {
+        this.items = (E[]) Array.newInstance(klazz, input.length);
         System.arraycopy(input, 0, this.items, 0, input.length);
     }
 
-    public void add(int newItem) {
-        int[] resized = new int[items.length + 1];
+    public void add(E newItem) {
+        E[] resized = (E[]) Array.newInstance(newItem.getClass(), items.length + 1);
         System.arraycopy(items, 0, resized, 0, items.length);
         resized[items.length] = newItem;
         items = resized;
@@ -41,7 +42,7 @@ public class IntArrayList {
         if (index < 0 || index > items.length - 1) {
             throw new NoSuchElementException();
         }
-        int[] downsized = new int[items.length - 1];
+        E[] downsized = (E[]) Array.newInstance(items[index].getClass(), items.length - 1);
         System.arraycopy(items, 0, downsized, 0, index);
 
         if (items.length - (index + 1) >= 0) {
@@ -50,27 +51,27 @@ public class IntArrayList {
         items = downsized;
     }
 
-    public int get(int index) {
+    public E get(int index) {
         if (index < 0 || index > items.length - 1) {
             throw new NoSuchElementException();
         }
         return items[index];
     }
 
-    public void removeObject(int toRemove) {
+    public void removeObject(E toRemove) {
 
         int occurrences = 0;
 
-        for (int item : items) {
-            if (item == toRemove) {
+        for (E item : items) {
+            if (item.equals(toRemove)) {
                 occurrences++;
             }
         }
 
-        int[] downsized = new int[items.length - occurrences];
+        E[] downsized = (E[]) Array.newInstance(toRemove.getClass(), items.length - occurrences);
         int targetIndex = 0;
 
-        for (int item : items) {
+        for (E item : items) {
 
             if (item != toRemove) {
                 downsized[targetIndex] = item;

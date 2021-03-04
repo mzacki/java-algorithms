@@ -11,11 +11,6 @@
 
     <artifactId>math</artifactId>
 
-    <properties>
-        <maven.compiler.source>12</maven.compiler.source>
-        <maven.compiler.target>12</maven.compiler.target>
-    </properties>
-
     <build>
         <plugins>
             <plugin>
@@ -24,5 +19,10 @@
             </plugin>
         </plugins>
     </build>
+
+    <properties>
+        <maven.compiler.source>15</maven.compiler.source>
+        <maven.compiler.target>15</maven.compiler.target>
+    </properties>
 
 </project>
