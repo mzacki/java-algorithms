@@ -1,5 +1,8 @@
 package edu.ant.algorithms.data.structures.list.linked;
 
+import edu.ant.algorithms.data.structures.list.linked.singly.HeadAndTailLinkedList;
+import edu.ant.algorithms.data.structures.list.linked.singly.SinglyLinkedList;
+
 public class ExampleOfUse {
 
     public static void main(String[] args) {
@@ -8,7 +11,7 @@ public class ExampleOfUse {
         Item item3 = new Item(3L, "item three");
         Item item4 = new Item(4L, "item four");
 
-        SingleLinkedList list = new SingleLinkedList();
+        SinglyLinkedList list = new SinglyLinkedList();
         list.add(item1);
         list.add(item2);
         list.add(item3);

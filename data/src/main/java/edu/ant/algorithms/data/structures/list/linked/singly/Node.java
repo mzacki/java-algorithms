@@ -1,4 +1,6 @@
-package edu.ant.algorithms.data.structures.list.linked;
+package edu.ant.algorithms.data.structures.list.linked.singly;
+
+import edu.ant.algorithms.data.structures.list.linked.Item;
 
 public class Node {
 
@@ -25,6 +27,7 @@ public class Node {
         this.next = next;
     }
 
+    @Override
     public String toString() {
         return item.toString();
     }

@@ -1,14 +1,16 @@
-package edu.ant.algorithms.data.structures.list.linked;
+package edu.ant.algorithms.data.structures.list.linked.singly;
 
+import edu.ant.algorithms.data.structures.list.linked.Item;
 import edu.ant.patterns.utils.logger.LoggingService;
 
 /**
  * This impl adds new item as a new head of the list.
+ * Insertion: O(1) - no need to traverse the list
  * Previously added items are shifted to further positions.
  * Git commit-like style.
  * */
 
-public class SingleLinkedList {
+public class SinglyLinkedList {
 
     private Node head;
     private int size;

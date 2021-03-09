@@ -1,10 +1,14 @@
-package edu.ant.algorithms.data.structures.list.linked;
+package edu.ant.algorithms.data.structures.list.linked.singly;
 
+import edu.ant.algorithms.data.structures.list.linked.Item;
 import edu.ant.patterns.utils.logger.LoggingService;
 
 /**
- * It seems to be more natural impl - add first item as fixed head pointing to tail (next), then subsequent item as tail
- * pointing to null. Then another item is to replace null in the tail and becomes the tail itself.
+ * It seems to be more natural impl -
+ * add first item as fixed head pointing to tail (next),
+ * then subsequent item as tail pointing to null.
+ * Then another item is to replace null in the tail and becomes the tail itself.
+ * Insertion: O(n) - need to traverse the list
  */
 
 public class HeadAndTailLinkedList {
