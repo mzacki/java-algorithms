@@ -1,5 +1,6 @@
 package edu.ant.algorithms.data.structures.list.linked;
 
+import edu.ant.algorithms.data.structures.list.linked.doubly.DoublyLinkedList;
 import edu.ant.algorithms.data.structures.list.linked.singly.HeadAndTailLinkedList;
 import edu.ant.algorithms.data.structures.list.linked.singly.SinglyLinkedList;
 
@@ -30,6 +31,19 @@ public class ExampleOfUse {
         headAndTailLinkedList.log();
         headAndTailLinkedList.remove();
         headAndTailLinkedList.log();
+
+        DoublyLinkedList list2 = new DoublyLinkedList();
+        list2.addHead(item1);
+        list2.addHead(item2);
+        list2.addHead(item3);
+        list2.addHead(item4);
+
+        list2.log();
+
+        list2.removeHead();
+        list2.addTail(item4);
+
+        list2.log();
     }
 
 }
