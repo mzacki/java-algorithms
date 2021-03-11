@@ -1,6 +1,15 @@
-package edu.ant.algorithms.data.structures.stack;
+package edu.ant.algorithms.data.structures.stack.array;
 
 import java.util.Arrays;
+
+
+/**
+ * LIFO
+ * no random access (except for top item by peek method)
+ * example: method call stack
+ * O(n) for array implementation
+ * array impl is preferable if max size is known and when memory is limited
+ * */
 
 public class ArrayStack<T> implements Stack<T> {
 

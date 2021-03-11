@@ -1,4 +1,4 @@
-package edu.ant.algorithms.data.structures.stack;
+package edu.ant.algorithms.data.structures.stack.array;
 
 public interface Stack<T> {
 
