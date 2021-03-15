@@ -1,4 +1,4 @@
-package edu.ant.algorithms.data.structures.list.linked;
+package edu.ant.algorithms.data.structures.utils;
 
 /**
  * - available since Java 14

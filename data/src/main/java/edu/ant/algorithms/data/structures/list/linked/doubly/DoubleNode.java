@@ -1,6 +1,6 @@
 package edu.ant.algorithms.data.structures.list.linked.doubly;
 
-import edu.ant.algorithms.data.structures.list.linked.Item;
+import edu.ant.algorithms.data.structures.utils.Item;
 
 public class DoubleNode {
 

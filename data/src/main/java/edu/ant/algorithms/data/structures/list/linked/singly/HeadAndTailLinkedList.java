@@ -1,6 +1,6 @@
 package edu.ant.algorithms.data.structures.list.linked.singly;
 
-import edu.ant.algorithms.data.structures.list.linked.Item;
+import edu.ant.algorithms.data.structures.utils.Item;
 import edu.ant.patterns.utils.logger.LoggingService;
 
 /**
