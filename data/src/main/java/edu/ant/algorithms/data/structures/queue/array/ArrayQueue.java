@@ -6,35 +6,38 @@ import java.util.NoSuchElementException;
 public class ArrayQueue {
 
     private Item[] items;
-    private int front;
-    private int end;
+    private int frontIndex;
+    private int endIndex;
 
     public ArrayQueue(int size) {
         items = new Item[size];
     }
 
     public void add(Item item) {
-        if (end == items.length) {
+        // TODO consider different implementation
+        // constant resizing is not the best solution
+        if (endIndex == items.length) {
             Item[] resized = new Item[2 * items.length];
             System.arraycopy(items, 0, resized, 0, items.length);
             items = resized;
         }
 
-        items[end] = item;
-        end++;
+        items[endIndex] = item;
+        endIndex++;
     }
 
     public Item remove() {
+        // consider downsizing if possible
         if (size() == 0) {
             throw new NoSuchElementException();
         }
 
-        Item item = items[front];
-        items[front] = null;
-        front++;
+        Item item = items[frontIndex];
+        items[frontIndex] = null;
+        frontIndex++;
         if (size() == 0) {
-            front = 0;
-            end = 0;
+            frontIndex = 0;
+            endIndex = 0;
         }
 
         return item;
@@ -45,11 +48,11 @@ public class ArrayQueue {
             throw new NoSuchElementException();
         }
 
-        return items[front];
+        return items[frontIndex];
     }
 
     public int size() {
-        return end - front;
+        return endIndex - frontIndex;
     }
 
 }
