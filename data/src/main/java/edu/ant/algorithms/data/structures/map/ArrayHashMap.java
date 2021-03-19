@@ -15,12 +15,13 @@ public class ArrayHashMap {
         items = new Item[10];
     }
 
-    public Item put(String key, Item item) {
+    public Item put(String key, Item item) throws HashMapStoreException {
         int hashIndex = hash(key);
-        if (items[hashIndex] != null) {
-            throw new ArrayStoreException();
-        }
+
+        if (items[hashIndex] != null) throw new HashMapStoreException();
+
         items[hashIndex] = item;
+
         return item;
     }
 
