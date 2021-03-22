@@ -1,18 +1,22 @@
 package edu.ant.algorithms.data.structures.map;
 
+import edu.ant.algorithms.data.structures.utils.HashedItem;
 import edu.ant.algorithms.data.structures.utils.Item;
 
 /**
- * Including linear probing / open addressing
+ * Including:
+ * - linear probing / open addressing to handle collisions
+ * - rehashing to populate empty slots
  */
 
-public class ArrayHashMap2 {
+public class LinearProbingHashMap {
 
-    private static record SavedItem(String key, Item item) {}
-    private SavedItem[] map;
+    // moved to external class
+    // private static record HashedItem(String key, Item item) {}
+    private HashedItem[] map;
 
-    public ArrayHashMap2() {
-        map = new SavedItem[10];
+    public LinearProbingHashMap() {
+        map = new HashedItem[10];
     }
 
     public void put(String key, Item item) throws HashMapStoreException {
@@ -31,7 +35,7 @@ public class ArrayHashMap2 {
         if (isTaken(hashIndex)) {
             throw new HashMapStoreException("Index taken " + hashIndex);
         } else {
-            map[hashIndex] = new SavedItem(key, item);
+            map[hashIndex] = new HashedItem(key, item);
         }
 
     }
@@ -41,7 +45,7 @@ public class ArrayHashMap2 {
 
         if (hashIndex == -1) return null;
 
-        return map[hashIndex].item;
+        return map[hashIndex].item();
     }
 
     public Item remove(String key) throws HashMapStoreException {
@@ -49,16 +53,16 @@ public class ArrayHashMap2 {
 
         if (hashIndex == -1) return null;
 
-        Item item = map[hashIndex].item;
+        Item item = map[hashIndex].item();
 
         map[hashIndex] = null;
 
-        SavedItem[] snapshotMap = map;
+        HashedItem[] snapshotMap = map;
 
-        map = new SavedItem[snapshotMap.length];
+        map = new HashedItem[snapshotMap.length];
 
-        for (SavedItem savedItem : snapshotMap) {
-            if (savedItem != null) put(savedItem.key, savedItem.item);
+        for (HashedItem hashedItem : snapshotMap) {
+            if (hashedItem != null) put(hashedItem.key(), hashedItem.item());
         }
 
         return item;
@@ -71,13 +75,13 @@ public class ArrayHashMap2 {
     private int getKey(String key) {
         int hashIndex = hash(key);
 
-        if (map[hashIndex] != null && map[hashIndex].key.equals(key)) return hashIndex;
+        if (map[hashIndex] != null && map[hashIndex].key().equals(key)) return hashIndex;
 
         int stopIndex = hashIndex;
 
         hashIndex = hashIndex == map.length - 1 ? 0 : hashIndex + 1;
 
-        while (hashIndex != stopIndex && map[hashIndex] != null && !map[hashIndex].key.equals(key)) {
+        while (hashIndex != stopIndex && map[hashIndex] != null && !map[hashIndex].key().equals(key)) {
             hashIndex = (hashIndex + 1) % map.length;
         }
 
