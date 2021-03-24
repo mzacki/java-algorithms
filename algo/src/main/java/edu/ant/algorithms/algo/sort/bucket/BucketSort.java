@@ -10,6 +10,7 @@ import java.util.List;
  * O(n)
  * assumptions
  * hashing
+ * !in-place
  * */
 
 public class BucketSort implements Sorter {
@@ -39,6 +40,8 @@ public class BucketSort implements Sorter {
         // in case of collision bucket may contain more entries
         // which are to be sorted now
         for (List bucket: bucketArray) {
+            // stability / unstability of entire implementation depends on
+            // the algo used here
             Collections.sort(bucket);
         }
 
