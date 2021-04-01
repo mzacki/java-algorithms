@@ -1,4 +1,6 @@
-package edu.ant.algorithms.algo.search.tree;
+package edu.ant.algorithms.data.structures.tree;
+
+import edu.ant.patterns.utils.logger.LoggingService;
 
 public class Node {
 
@@ -29,6 +31,26 @@ public class Node {
             } else {
                 rightChild.add(value);
             }
+        }
+    }
+
+    /**
+     *  Implemented: in-order traversal
+     *  - ensures natural order
+     *  - visits left child, root, right child and so on
+     *  other traversals:
+     *  - level - visits nodes level by level from left to right
+     *  - pre-order - first of all visits root of every subtree
+     *  - post-order - last visits root of every subtree
+     * */
+
+    public void visit() {
+        if (leftChild != null) {
+            leftChild.visit();
+        }
+        LoggingService.logMsg(item);
+        if (rightChild != null) {
+            rightChild.visit();
         }
     }
 

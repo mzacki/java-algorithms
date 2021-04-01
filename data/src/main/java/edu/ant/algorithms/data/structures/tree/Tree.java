@@ -1,4 +1,4 @@
-package edu.ant.algorithms.algo.search.tree;
+package edu.ant.algorithms.data.structures.tree;
 
 public class Tree {
 
@@ -11,5 +11,13 @@ public class Tree {
             root.add(item);
         }
     }
+
+    // in-order traversal
+    public void visit() {
+        if (root != null) {
+            root.visit();
+        }
+    }
+
 
 }
