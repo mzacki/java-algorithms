@@ -38,7 +38,7 @@ public class Node {
      *  Implemented: in-order traversal
      *  - ensures natural order
      *  - visits left child, root, right child and so on
-     *  other traversals:
+     *  other types of traversals:
      *  - level - visits nodes level by level from left to right
      *  - pre-order - first of all visits root of every subtree
      *  - post-order - last visits root of every subtree
