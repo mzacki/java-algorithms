@@ -35,14 +35,10 @@ public class Node {
     }
 
     /**
-     *  Implemented: in-order traversal
-     *  - ensures natural order
-     *  - visits left child, root, right child and so on
-     *  other types of traversals:
-     *  - level - visits nodes level by level from left to right
-     *  - pre-order - first of all visits root of every subtree
-     *  - post-order - last visits root of every subtree
-     * */
+     * Implemented: in-order traversal - ensures natural order - visits left child, root, right child and so on other
+     * types of traversals: - level - visits nodes level by level from left to right - pre-order - first of all visits
+     * root of every subtree - post-order - last visits root of every subtree
+     */
 
     public void visit() {
         if (leftChild != null) {
@@ -52,6 +48,29 @@ public class Node {
         if (rightChild != null) {
             rightChild.visit();
         }
+    }
+
+    public Node get(int item) {
+        if (this.item == item) {
+            return this;
+        }
+        if (this.item < item && leftChild != null) {
+            return leftChild.get(item);
+        }
+        if (this.item >= item && rightChild != null) {
+            return rightChild.get(item);
+        }
+        return null;
+    }
+
+    public int min() {
+        return leftChild == null ?
+                item : leftChild.min();
+    }
+
+    public int max() {
+        return rightChild == null ?
+                item : rightChild.max();
     }
 
 }

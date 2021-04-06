@@ -19,5 +19,20 @@ public class Tree {
         }
     }
 
+    public Node get(int item) {
+        return root != null ?
+                root.get(item) : null;
+    }
+
+
+    public int min() {
+        return root == null ?
+                Integer.MIN_VALUE : root.min();
+    }
+
+    public int max() {
+        return root == null ?
+                Integer.MAX_VALUE : root.max();
+    }
 
 }
