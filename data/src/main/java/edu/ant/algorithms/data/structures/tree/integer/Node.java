@@ -1,10 +1,10 @@
-package edu.ant.algorithms.data.structures.tree;
+package edu.ant.algorithms.data.structures.tree.integer;
 
 import edu.ant.patterns.utils.logger.LoggingService;
 
 public class Node {
 
-    private final int item;
+    private int item;
     private Node leftChild;
     private Node rightChild;
 
@@ -73,4 +73,29 @@ public class Node {
                 item : rightChild.max();
     }
 
+    // getters & setters
+
+    public int getItem() {
+        return item;
+    }
+
+    public void setItem(int item) {
+        this.item = item;
+    }
+
+    public Node getLeftChild() {
+        return leftChild;
+    }
+
+    public void setLeftChild(Node leftChild) {
+        this.leftChild = leftChild;
+    }
+
+    public Node getRightChild() {
+        return rightChild;
+    }
+
+    public void setRightChild(Node rightChild) {
+        this.rightChild = rightChild;
+    }
 }
