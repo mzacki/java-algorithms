@@ -28,7 +28,7 @@ public class MaxHeap {
             throw new IndexOutOfBoundsException("Heap is already filled");
         }
         items[currentSize] = item;
-        heapify(currentSize);
+        heapifyUpwards(currentSize);
         currentSize++;
     }
 
@@ -44,7 +44,7 @@ public class MaxHeap {
 
         if (index == 0 || items[index] < items[parent]) {
             heapifyBelow(index, currentSize - 1);
-        } else heapify(index);
+        } else heapifyUpwards(index);
 
         currentSize--;
 
@@ -52,11 +52,24 @@ public class MaxHeap {
 
     }
 
+    // heap sort
+    // O (n * log n)
+    private void sort() {
+        int endIndex = currentSize - 1;
+        for (int i = 0; i < endIndex; i++) {
+            int tmp = items[0];
+            items[0] = items[endIndex - i];
+            items[endIndex - i] = tmp;
+
+            heapifyBelow(0, endIndex - i - 1);
+        }
+    }
+
     // compare newly added item to its parent
     // and swap if necessary
     // we do not have to compare and order children
     // children may be unsorted when going from left to right
-    private void heapify(int index) {
+    private void heapifyUpwards(int index) {
         int addedItem = items[index];
 
         while (index > 0 && addedItem > items[getParent(index)]) {
