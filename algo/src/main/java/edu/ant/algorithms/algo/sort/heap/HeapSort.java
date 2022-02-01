@@ -60,7 +60,7 @@ public class HeapSort implements Sorter {
 
     /**
      * In max heap, root is always the greatest value. In sorted heap / array, index 0 must be the lowest value.
-     * Hence the swap: root goes to the end of array.
+     * Hence, the swap: root goes to the end of array.
      * Root part is already sorted, as the root is the greatest value.
      * Next the rest of array must be checked and sorted.
      */
