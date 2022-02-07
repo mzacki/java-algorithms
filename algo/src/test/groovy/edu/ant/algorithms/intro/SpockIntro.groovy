@@ -1,3 +1,5 @@
+package edu.ant.algorithms.intro
+
 class SpockIntro {
 
     /**
