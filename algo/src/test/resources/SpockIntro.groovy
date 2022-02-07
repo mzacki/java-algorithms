@@ -10,6 +10,12 @@ class SpockIntro {
      *  - given / when / then declarative style of BDD
      *  - https://meetspock.appspot.com/
      *  - https://groovyconsole.appspot.com/
+     *  - Spock: Groovy testing Java code
+     *  - the reverse is possible:
+     *  - JUnit Java testing Groovy code
+     *  - JUnit Groovy (sic!) testing Groovy OR Java code
+     *  - Groovy supports a GroovyTestCase class, which extends the standard
+     TestCase from JUnit
 
     */
 
