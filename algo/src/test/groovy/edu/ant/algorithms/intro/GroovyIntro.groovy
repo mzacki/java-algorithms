@@ -15,6 +15,7 @@ class GroovyIntro {
      * The Groovy runtime is a single Java archive (JAR) file
      * To enable Groovy in existing Java project add Groovy JAR into the classpath (e.g. Maven dependency)
      * Groovy is a dynamic language (Java is static)
+     * (dynamically typed or optionally typed, because Groovy still supports the Java way of explicit types)
      * Is a strongly typed language (same as Java)
      * Is object-oriented (same as Java)
      * Comes with the GDK (Java has the JDK )
@@ -35,6 +36,13 @@ class GroovyIntro {
      * delegate existing methods to other objects, or even create completely new classes during runtime.
      * */
 
+
+    /**
+     * ### def keyword:
+     * - def with variables - type of a variable unknown, will be known later
+     * - def with methods - return type of a method unknown
+     * */
+
     // fields are private by default
     int id
     String title // no semicolons
@@ -46,12 +54,13 @@ class GroovyIntro {
         // getters and setters available automatically
         groovyExample.setContent("testContent")
         // even simplier direct access
-        groovyExample.content ="anotherTestContent"
+        groovyExample.content = "anotherTestContent"
         // directly or by getter
         println(groovyExample.content)
         // println is groovy helper shortcut but we can use
         // dollar
         println("Content of the file is $groovyExample.content")
+        println(groovyExample.transform())
     }
 
     /**
@@ -59,6 +68,24 @@ class GroovyIntro {
      * Groovy code can call Java methods.
      * Groovy classes can extend Java classes.
      * Groovy classes can implement Java interfaces.
+     * */
+
+    /**
+     * ### return keyword:
+     * - return keyword is also optional
+     * - the last evaluated statement in a method is the result
+     of the method in that case.
+     * */
+
+    /**
+     * ### Groovy truth:
+     * Groovy treats all objects 8 as true unless
+     * The object is an empty string.
+     * The object is a null reference.
+     * The object is the zero number.
+     * The object is an empty collection (map, list, array, and so on).
+     * The object is the false Boolean (obviously).
+     * The object is a regex matcher that fails.
      * */
 
 }
