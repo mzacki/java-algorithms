@@ -3,16 +3,16 @@ package edu.ant.algorithms.intro
 class SpockIntro {
 
     /**
-
      * Spock:
      *  - testing framework
      *  - runs on JUnit runner
      *  - can mock and stub - like Mockito - but it's included
      *  - embraces the paradigm of behavior-driven development (BDD)
      *  - given / when / then declarative style of BDD
+     *  - no assert statemets, no assert methods required
+     *  (but can use assert keyword -> Groovy truth)
      *  - https://meetspock.appspot.com/
      *  - https://groovyconsole.appspot.com/
-     *
      *  Spock: Groovy testing Java code
      *  the reverse is possible:
      *  - JUnit Java testing Groovy code
