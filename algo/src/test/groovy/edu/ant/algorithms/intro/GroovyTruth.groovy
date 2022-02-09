@@ -2,6 +2,8 @@ package edu.ant.algorithms.intro
 
 import spock.lang.Specification
 
+import java.util.regex.Pattern
+
 class GroovyTruth extends Specification{
 
     def "assert true"() {
@@ -80,6 +82,25 @@ class GroovyTruth extends Specification{
         def nonempty = ["item"]
         expect:
         assert nonempty
+    }
+
+    def "regex is true if matches at least once"() {
+        given:
+        Pattern myRegex = ~/needle/
+        expect:
+        assert myRegex.matcher("needle in haystack")
+        assert !myRegex.matcher("Wrong haystack")
+    }
+
+    def "equality and identity"() {
+        given:
+        List<String> list1 = ["A", "B", "C"]
+        List<String> list2 = ["A", "B", "C"]
+        expect:
+        // equality (not identity / not reference) test
+        list1 == list2 // equivalent of equals in Java
+        // identity (reference) test
+        !list1.is(list2) // equivalent of == in Java
     }
 
 }
