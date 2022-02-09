@@ -61,6 +61,51 @@ class GroovyIntro {
         // dollar
         println("Content of the file is $groovyExample.content")
         println(groovyExample.transform())
+
+        // so-called map-based constructors (instead of setters or parametrized constructors)
+        def anotherGroovyExample = new GroovyExample(content: "test content")
+
+        // map
+        // it's LinkedHashMap by default
+        Map<String, Integer> map = ["input1":1, "input2":2]
+
+        // list
+        List<String> list = ["A"]
+        // add
+        list << "B" << "C"
+        print(list)
+        // replace
+        list[0] = "X"
+        print(list)
+
+        // input reading
+        // String testInput = new File ( "src/test/resources/quotes.txt").text
+        // line by line
+        // File("src/test/resources/quotes.txt").readLines()
+        // to read xml or json, use Slurper (deprecated)
+
+        /**
+         * Closures
+         * */
+
+        // full notation
+        Closure simple = { int x -> return x * 2}
+        // if not fails, shows nothing
+        assert simple(3) == 6
+        // simple notation, return is optional
+        def simpler = { x -> x * 2}
+        assert simpler(3) == 6
+        // bi-function
+        def twoArguments = { x,y -> x + y}
+        assert twoArguments(3,5) ==8
+
+        /**
+         * Methods using closures, eg. on collections, like list.every(elem ->  elem.endsWith()):
+         * every(closure)
+         * any (closure)
+         * find(closure)
+         * findAll(closure)
+         * */
     }
 
     /**
@@ -86,6 +131,13 @@ class GroovyIntro {
      * The object is an empty collection (map, list, array, and so on).
      * The object is the false Boolean (obviously).
      * The object is a regex matcher that fails.
+     * */
+
+    /**
+     * In Groovy, the == operator isn’t testing identity like Java.
+     * It calls the equals() method of the object.
+     * Identity in Groovy is handled by the is keyword.
+     * Thus object1.is(object2) is the Groovy way of testing identity.
      * */
 
 }
