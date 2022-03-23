@@ -33,7 +33,8 @@
                         <dependency>
                             <groupId>org.codehaus.groovy</groupId>
                             <artifactId>groovy-all</artifactId>
-                            <version>3.0.7</version>
+                            <version>3.0.10</version>
+                            <type>pom</type>
                         </dependency>
                     </dependencies>
                 </plugin>
@@ -86,7 +87,7 @@
         <dependency>
             <groupId>org.codehaus.groovy</groupId>
             <artifactId>groovy</artifactId>
-            <version>3.0.7</version>
+            <version>3.0.10</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
