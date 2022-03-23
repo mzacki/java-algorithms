@@ -35,6 +35,16 @@ class Student {
 
 public class Sort {
 
+            /*
+            Sample input:
+            5
+            33 Rumpa 3.68
+            85 Ashis 3.85
+            56 Samiha 3.75
+            19 Samara 3.75
+            22 Fahim 3.76
+            */
+
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int testCases = Integer.parseInt(in.nextLine());
