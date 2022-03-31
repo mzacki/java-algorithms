@@ -9,6 +9,13 @@ public abstract class SearchAlgorithm {
     private int indexOfFound;
     private int step;
 
+    protected SearchAlgorithm(int[] input) {
+        this.input = input;
+        this.target = 0;
+        this.indexOfFound = -1;
+        this.step = 0;
+    }
+
     protected SearchAlgorithm(int[] input, int target) {
         this.input = input;
         this.target = target;
