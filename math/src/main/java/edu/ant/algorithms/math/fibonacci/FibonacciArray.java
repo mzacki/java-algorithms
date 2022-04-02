@@ -1,8 +1,9 @@
 package edu.ant.algorithms.math.fibonacci;
 
-/*
+/**
 * Using memoization - caching
 * returns sequence array
+* O(n)
 * */
 
 public class FibonacciArray {
