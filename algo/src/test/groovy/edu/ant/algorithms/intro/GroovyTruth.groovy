@@ -4,7 +4,7 @@ import spock.lang.Specification
 
 import java.util.regex.Pattern
 
-class GroovyTruth extends Specification{
+class GroovyTruth extends Specification {
 
     def "assert true"() {
         expect:
