@@ -6,9 +6,9 @@ public class CanBalance {
         int[] input = {1, 1, 1, 2, 1};
         int[] input2 = {2, 1, 1, 2, 1};
         int[] input3 = {10, 10};
-        assert(canBalance(input));
-        assert(!canBalance(input2));
-        assert(canBalance(input3));
+        assert(canBalance2(input));
+        assert(!canBalance2(input2));
+        assert(canBalance2(input3));
     }
 
     public static boolean canBalance(int[] nums) {
@@ -25,6 +25,25 @@ public class CanBalance {
                 right = right + nums[k];
             }
 
+            if (left == right) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public static boolean canBalance2(int[] nums) {
+
+        int sum = 0;
+        for (int num : nums) {
+            sum = sum + num;
+        }
+
+        int left = 0;
+        int right;
+        for (int num : nums) {
+            left = left + num;
+            right = sum - left;
             if (left == right) {
                 return true;
             }
